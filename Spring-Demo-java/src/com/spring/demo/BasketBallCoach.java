@@ -1,11 +1,12 @@
 package com.spring.demo;
 
-public class BasketBallCoach implements Coach{
-	
+public class BasketBallCoach implements Coach {
+
 	private FortuneService fortuneService;
-	
-	public BasketBallCoach() {}
-	
+
+	public BasketBallCoach() {
+	}
+
 	public BasketBallCoach(FortuneService thefortuneService) {
 		fortuneService = thefortuneService;
 	}
@@ -18,7 +19,13 @@ public class BasketBallCoach implements Coach{
 	public String getFortune() {
 		return fortuneService.getFortune();
 	}
-	
-	
+
+	public void beanInitMethod() {
+		System.out.println("Bean Instantiated method");
+	}
+
+	public void beanDestroyMethod() {
+		System.out.println("Bean destroy method");
+	}
 
 }
