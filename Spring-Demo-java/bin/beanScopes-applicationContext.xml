@@ -10,14 +10,10 @@
     <!-- configuration for injecting properties file in bean container -->
 	<context:property-placeholder location="classpath:sports.properties"/>
 	
-
 	
 	<!-- constructor bean injection -->
 	<bean id="theCoach"
-		class="com.spring.demo.BasketBallCoach"
-		init-method="beanInitMethod" 
-		destroy-method="beanDestroyMethod"
-		scope="prototype">
+		class="com.spring.demo.BasketBallCoach" scope="prototype">
 	</bean>
 
 </beans>

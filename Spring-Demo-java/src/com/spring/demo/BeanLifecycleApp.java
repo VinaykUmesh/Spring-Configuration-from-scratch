@@ -10,7 +10,9 @@ public class BeanLifecycleApp {
 		
 		Coach theCoach = context.getBean("theCoach", Coach.class);
 		
-		System.out.println(theCoach.getBasketBallCoach());
+		Coach anotherCoach = context.getBean("theCoach", Coach.class);
+		
+		System.out.println((theCoach == anotherCoach) ? "Singleton" : "Prototype");
 		
 		context.close();
 		
